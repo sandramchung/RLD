@@ -1,0 +1,14 @@
+# files
+wp-content/*
+
+# sensitive
+error_log
+wp-config.php
+/_private/*
+.htaccess
+
+# Mac
+.DS_Store
+
+# unrelated 
+hosting_provider_filters.php
