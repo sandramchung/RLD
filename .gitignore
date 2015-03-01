@@ -1,5 +1,9 @@
 # files
+!wp-content/
+
 wp-content/*
+!wp-content/themes/
+!wp-content/plugins/
 
 # sensitive
 error_log
