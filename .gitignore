@@ -10,6 +10,8 @@ error_log
 wp-config.php
 /_private/*
 .htaccess
+.htpasswd
+.htpasswds/*
 
 # Mac
 .DS_Store

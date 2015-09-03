@@ -3,15 +3,15 @@
  * Featured post content
  *
  * @package    Modern
- * @copyright  2014 WebMan - Oliver Juhas
+ * @copyright  2015 WebMan - Oliver Juhas
  *
  * @since    1.0
- * @version  1.1
+ * @version  1.4.3
  */
 
 ?>
 
-<article data-id="post-<?php the_ID(); ?>" <?php post_class(); wmhook_entry_container_atts(); ?>>
+<article data-id="post-<?php the_ID(); ?>" <?php post_class(); echo apply_filters( 'wmhook_entry_container_atts', '' ); ?>>
 
 	<?php
 
@@ -33,7 +33,7 @@
 
 				//Custom banner image
 					if ( is_numeric( $banner_image ) ) {
-						echo wp_get_attachment_image( absint( $banner_image ), WM_IMAGE_SIZE_BANNER );
+						echo wp_get_attachment_image( absint( $banner_image ), 'modern_banner' );
 					} elseif ( 0 === strpos( $banner_image, '<img ' ) ) {
 						echo $banner_image;
 					} else {
@@ -43,7 +43,7 @@
 			} elseif ( has_post_thumbnail() && empty( $banner_image ) ) {
 
 				//Post featured image
-					the_post_thumbnail( WM_IMAGE_SIZE_BANNER );
+					the_post_thumbnail( 'modern_banner' );
 
 			} else {
 

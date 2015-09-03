@@ -3,10 +3,10 @@
  * Page content
  *
  * @package    Modern
- * @copyright  2014 WebMan - Oliver Juhas
+ * @copyright  2015 WebMan - Oliver Juhas
  *
  * @since    1.0
- * @version  1.1
+ * @version  1.4.4
  */
 
 
@@ -15,7 +15,7 @@ $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); wmhook_entry_container_atts(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); echo apply_filters( 'wmhook_entry_container_atts', '' ); ?>>
 
 	<?php
 
@@ -36,11 +36,19 @@ $pagination_suffix = wm_paginated_suffix( 'small', 'post' );
 
 			<figure class="post-thumbnail"<?php echo wm_schema_org( 'image' ); ?>>
 
-				<a href="<?php echo esc_url( $image_link[0] ); ?>" title="<?php the_title_attribute(); ?>">
+				<?php
 
-					<?php the_post_thumbnail( WM_IMAGE_SIZE_SINGULAR ); ?>
+				if ( ! empty( $image_link ) ) {
+					echo '<a href="' . esc_url( $image_link[0] ) . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+				}
 
-				</a>
+				the_post_thumbnail( apply_filters( 'wmhook_entry_featured_image_size', 'thumbnail' ) );
+
+				if ( ! empty( $image_link ) ) {
+					echo '</a>';
+				}
+
+				?>
 
 			</figure>
 
