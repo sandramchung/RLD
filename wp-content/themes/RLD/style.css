@@ -36,9 +36,10 @@
     padding: 7rem 0 1rem;
     letter-spacing: .5px;
   }
-  .slick-next {
+  .slick-arrow {
     width: 3em;
     height: 3em;
+    margin-top: 3em;
   }
 }
 
