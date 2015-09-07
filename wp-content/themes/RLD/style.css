@@ -25,9 +25,11 @@
   display: none;
 }
 
+/*  #site-banner .slick-arrow {
+    border: none;
+  }*/
 
-
-/* Portrait and Landscape */
+/* Portrait and Landscape mobile */
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
@@ -40,8 +42,13 @@
     letter-spacing: .5px;
   }
 
-  #site-banner .slick-arrow {
-    display: none;
+  #site-banner .slick-next, #site-banner .slick-prev {
+    width: 3em;
+    height: 3em;
+  }
+
+  #site-banner .slick-next {
+    left: 4em;
   }
 }
 
