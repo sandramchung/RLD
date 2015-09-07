@@ -11,3 +11,8 @@
  Tags:         dark, portfolio, right-sidebar, responsive-layout, three-columns
  Text Domain:  rld
 */
+
+.site-banner h1 {
+  font-size: 4.8rem;
+  padding: 12rem 0 5rem;
+}
