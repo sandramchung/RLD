@@ -25,6 +25,18 @@
   display: none;
 }
 
-.slideshow-window {
-  border-radius: none;
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .site-banner h1 {
+    font-size: 2.6rem;
+    color: #aaa;
+    padding: 6rem 0 0;
+    letter-spacing: 1px;
+  }
+}
+
+
 }
