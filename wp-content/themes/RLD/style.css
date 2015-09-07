@@ -30,18 +30,17 @@
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
+  
   .site-banner h1 {
     font-size: 2rem;
     color: #aaa;
     padding: 7rem 0 1rem;
     letter-spacing: .5px;
   }
-  .slick-arrow {
-    width: 3em;
-    height: 3em;
-    margin-top: 3em;
+
+  .site-banner .slick-arrow {
+    display: none;
   }
 }
 
 
-}
