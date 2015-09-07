@@ -16,3 +16,15 @@
   font-size: 4.8rem;
   padding: 12rem 0 5rem;
 }
+
+.author {
+  display: none;
+}
+
+.breadcrumbs-container {
+  display: none;
+}
+
+.slideshow-window {
+  border-radius: none;
+}
